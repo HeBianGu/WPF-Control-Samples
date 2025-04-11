@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.Samples.Applications.Default", "..\Source\Samples\H.Samples.Applications.Default\H.Samples.Applications.Default.csproj", "{62574D47-0E2E-428C-9D4D-475415783AF4}"
 EndProject
@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{6C229E98-5
 		..\settings.xamlstyler = ..\settings.xamlstyler
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.Samples.Applications.Project", "..\H.Samples.Applications.Project\H.Samples.Applications.Project.csproj", "{98943DCA-E69A-4814-9111-95F30188321E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.Samples.Applications.Identify", "..\Source\Samples\H.Samples.Applications.Identify\H.Samples.Applications.Identify.csproj", "{21004813-B307-4934-BAF8-FBD2079AB086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.Samples.Applications.Project", "..\Source\Samples\H.Samples.Applications.Project\H.Samples.Applications.Project.csproj", "{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,16 +29,21 @@ Global
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98943DCA-E69A-4814-9111-95F30188321E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98943DCA-E69A-4814-9111-95F30188321E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98943DCA-E69A-4814-9111-95F30188321E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98943DCA-E69A-4814-9111-95F30188321E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21004813-B307-4934-BAF8-FBD2079AB086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21004813-B307-4934-BAF8-FBD2079AB086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21004813-B307-4934-BAF8-FBD2079AB086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21004813-B307-4934-BAF8-FBD2079AB086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{62574D47-0E2E-428C-9D4D-475415783AF4} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
-		{98943DCA-E69A-4814-9111-95F30188321E} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
+		{21004813-B307-4934-BAF8-FBD2079AB086} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
+		{3AEA8F19-0925-4647-A0AF-B5A2E7CE8061} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
 	EndGlobalSection
 EndGlobal

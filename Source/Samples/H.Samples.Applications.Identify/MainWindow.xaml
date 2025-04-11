@@ -1,9 +1,9 @@
-﻿<h:MainWindow x:Class="H.Samples.Applications.Project.MainWindow"
+﻿<h:MainWindow x:Class="H.Samples.Applications.Identify.MainWindow"
               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
               xmlns:h="https://github.com/HeBianGu"
-              xmlns:local="clr-namespace:H.Samples.Applications.Project"
+              xmlns:local="clr-namespace:H.Samples.Applications.Identify"
               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
               Title="MainWindow"
               Width="1200"
@@ -15,36 +15,30 @@
     </Window.DataContext>
     <h:MainWindow.CaptionTempate>
         <ControlTemplate>
-            <DockPanel WindowChrome.IsHitTestVisibleInChrome="True">
-                <Menu DockPanel.Dock="Left">
+            <DockPanel HorizontalAlignment="Right"
+                       LastChildFill="False"
+                       WindowChrome.IsHitTestVisibleInChrome="True">
+                <Menu>
                     <Menu.Resources>
                         <Style BasedOn="{StaticResource {x:Static MenuItemKeys.BindCommand}}"
                                TargetType="MenuItem" />
                     </Menu.Resources>
-                    <MenuItem Background="Transparent"
-                              Header="文件">
-                        <MenuItem Command="{ShowNewProjectCommand}" />
-                        <MenuItem Command="{ShowProjectsCommand}" />
-                        <MenuItem Command="{ShowEditProjectCommand}" />
-                        <MenuItem Command="{ShowSaveProjectCommand}" />
-                        <MenuItem Command="{ShowCurrentProjectFileCommand}" />
-                        <MenuItem Cattach.Icon="{x:Static FontIcons.Calendar}"
-                                  Header="最近的项目"
-                                  ItemsSource="{Binding Source={x:Static IocProject.Instance}, Path=Collection}">
-                            <MenuItem.ItemContainerStyle>
-                                <Style TargetType="MenuItem">
-                                    <Setter Property="Command" Value="{ShowOpenProjectCommand}" />
-                                    <Setter Property="CommandParameter" Value="{Binding}" />
-                                    <Setter Property="Height" Value="50" />
-                                    <Setter Property="MinWidth" Value="400" />
-                                </Style>
-                            </MenuItem.ItemContainerStyle>
-                        </MenuItem>
-                        <Separator />
-                        <MenuItem Cattach.Icon="{x:Static FontIcons.PowerButton}"
-                                  Command="{CloseAfterSaveWindowCommand}"
-                                  CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"
-                                  Header="退出" />
+                    <MenuItem Header="身份认证">
+                        <MenuItem Command="{ShowIocCommand Type={x:Type h:IUserViewPresenter}}"
+                                  Header="用户管理" />
+                        <MenuItem Command="{ShowIocCommand Type={x:Type h:IRoleViewPresenter}}"
+                                  Header="角色管理" />
+                        <MenuItem Command="{ShowIocCommand Type={x:Type h:IAuthorityViewPresenter}}"
+                                  Header="权限管理" />
+                        <MenuItem Command="{ShowIocCommand Type={x:Type h:IOperationViewPresenter}}"
+                                  Header="操作日志" />
+                    </MenuItem>
+                    <MenuItem Header="工具">
+                        <MenuItem Command="{ShowSettingCommand}" />
+                        <MenuItem Command="{ShowColorThemeViewCommand}" />
+                        <MenuItem Command="{ShowSettingCommand SwitchToType={x:Type h:IThemeOptions}}"
+                                  Header="{Binding Source={x:Static h:ThemeOptions.Instance}, Path=ColorResource.Name}" />
+                        <MenuItem Command="{ShowLog4netPathCommand}" />
                     </MenuItem>
                     <MenuItem Header="帮助">
                         <MenuItem Command="{ShowGuideCommand}" />
@@ -78,26 +72,13 @@
                         <MenuItem Command="{ShowAboutCommand}" />
                     </MenuItem>
                 </Menu>
-
                 <FontIconButton Command="{ShowColorThemeViewCommand}"
-                                DockPanel.Dock="Right"
                                 Style="{DynamicResource {x:Static FontIconButtonKeys.Command}}" />
                 <Button Command="{ShowSettingCommand SwitchToType={x:Type h:IThemeOptions}}"
-                        Content="{Binding Source={x:Static h:ThemeOptions.Instance}, Path=ColorResource.Name}"
-                        DockPanel.Dock="Right" />
+                        Content="{Binding Source={x:Static h:ThemeOptions.Instance}, Path=ColorResource.Name}" />
                 <FontIconButton Command="{ShowSettingCommand}"
-                                DockPanel.Dock="Right"
                                 Style="{DynamicResource {x:Static FontIconButtonKeys.Command}}" />
-                <ContentPresenter Content="{Ioc Type={x:Type ISwitchThemeViewPresenter}}"
-                                  DockPanel.Dock="Right" />
-
-                <TextBlock HorizontalAlignment="Center"
-                           VerticalAlignment="Center">
-                    <Hyperlink Command="{ShowProjectsCommand}">
-                        <Run Text="项目名称：" />
-                        <Run Text="{Binding Source={x:Static IocProject.Instance}, Path=Current.Title}" />
-                    </Hyperlink>
-                </TextBlock>
+                <ContentPresenter Content="{Ioc Type={x:Type ISwitchThemeViewPresenter}}" />
             </DockPanel>
         </ControlTemplate>
     </h:MainWindow.CaptionTempate>
@@ -133,34 +114,6 @@
                             Content="ShowString" />
                     <Button Command="{ShowDialogNoticeMessageCommand Message=我是Dialog消息}"
                             Content="ShowDialog" />
-                </UniformGrid>
-            </TabItem>
-            <TabItem Header="Modules">
-                <UniformGrid>
-                    <Button Command="{ShowAboutCommand}" />
-                    <Button Command="{ShowPrivacyCommand}" />
-                    <Button Command="{ShowAgreementCommand}" />
-                    <Button Command="{ShowWebSiteCommand}" />
-                    <Button Command="{ShowReleaseVersionsCommand}" />
-                    <Button Command="{ShowSupportCommand}" />
-                    <Button Command="{ShowSponsorCommand}" />
-                    <Button Command="{ShowContactCommand}" />
-                    <Button Command="{ShowGithubContactCommand}" />
-                    <Button Command="{ShowQQContactCommand}" />
-                    <Button Command="{ShowSendMailContactCommand}" />
-                    <Button Command="{ShowBlogContactCommand}" />
-                    <Button Command="{ShowPodcastContactCommand}" />
-
-                    <Button Command="{ShowFeedbackCommand}" />
-                    <Button Command="{ShowSettingCommand}" />
-                    <Button Command="{ShowGuideCommand}" />
-                    <Button Command="{ShowGuideTreeCommand}" />
-                </UniformGrid>
-            </TabItem>
-
-            <TabItem Header="Services">
-                <UniformGrid>
-                    <Button Command="{ShowLog4netPathCommand}" />
                 </UniformGrid>
             </TabItem>
         </TabControl>
