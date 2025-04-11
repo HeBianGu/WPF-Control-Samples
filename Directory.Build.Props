@@ -15,6 +15,7 @@
     <Authors>HeBianGu</Authors>
     <RepositoryUrl>https://github.com/HeBianGu/WPF-Control</RepositoryUrl>
     <PackageProjectUrl>https://github.com/HeBianGu/WPF-Control</PackageProjectUrl>
+    <Product>WPF-Control</Product>
     <Description>WPF-Control Samples项目</Description>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
