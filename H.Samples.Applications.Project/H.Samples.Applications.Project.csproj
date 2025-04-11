@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="H.ApplicationBases.Default" Version="1.0.5" />
+    <PackageReference Include="H.Data.Test" Version="1.0.5" />
+    <PackageReference Include="H.Modules.Project" Version="1.0.5" />
+    <PackageReference Include="H.Windows.Main" Version="1.0.5" />
+  </ItemGroup>
+</Project>

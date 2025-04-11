@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{6C229E98-5
 		..\settings.xamlstyler = ..\settings.xamlstyler
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.Samples.Applications.Project", "..\H.Samples.Applications.Project\H.Samples.Applications.Project.csproj", "{98943DCA-E69A-4814-9111-95F30188321E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,16 @@ Global
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62574D47-0E2E-428C-9D4D-475415783AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98943DCA-E69A-4814-9111-95F30188321E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98943DCA-E69A-4814-9111-95F30188321E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98943DCA-E69A-4814-9111-95F30188321E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98943DCA-E69A-4814-9111-95F30188321E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{62574D47-0E2E-428C-9D4D-475415783AF4} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
+		{98943DCA-E69A-4814-9111-95F30188321E} = {0A923306-A9C8-410C-A094-BF214A9A33D7}
 	EndGlobalSection
 EndGlobal
